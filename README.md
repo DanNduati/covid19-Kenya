@@ -27,4 +27,4 @@ python scraper_msg.py
 ```
 # expected output
 ![Image description](https://github.com/DanNduati/covid19-webscraper-and-sms-alert/blob/master/terminaloutput.png)
-![Image description](https://github.com/DanNduati/covid19-webscraper-and-sms-alert/blob/master/sms.jpeg)
+
