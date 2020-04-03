@@ -21,9 +21,11 @@ pip install selenium
 pip install twilio
 ```
 # running the script
+Web scraper script
 ```bash
 python scraper.py
 ```
+Web scraper script with sms alert
 ```bash
 python scraper_msg.py
 ```
