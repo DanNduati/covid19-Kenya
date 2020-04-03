@@ -43,8 +43,8 @@ class virus():
             self.driver.quit()
 
 def send_msg(country,tcases,ncases,tdeaths,ndeaths,acases,trecovered,scritical):
-    account_sid = 'ACd2728eee9bbefd12079ae05e9127909b'
-    auth_token = '208f59592f1da4f60e0404af91e64d66'
+    account_sid = 'your account sid'
+    auth_token = 'your authentication token'
     client = Client(account_sid,auth_token)
     msg = 'Today in ' + country + '\
             \nThere is new data on coronavirus:\
@@ -58,8 +58,8 @@ def send_msg(country,tcases,ncases,tdeaths,ndeaths,acases,trecovered,scritical):
             \nCheck the link: https://www.worldometers.info/coronavirus/'
     message =client.messages.create(
         body = str(msg),
-        from_='+12029521884',
-        to='+254791619010'
+        from_='your twilio number',
+        to='+number you want to send message to must be twilio veriified'
     )
     print(message.sid)
 
