@@ -26,5 +26,5 @@ Web scraper script with sms alert
 python scraper_msg.py
 ```
 # expected output
-![Image description](https://github.com/DanNduati/covid19-webscraper-and-sms-alert/blob/master/terminaloutput.png)
+![Expected output](https://github.com/DanNduati/covid19-webscraper-and-sms-alert/blob/master/terminaloutput.png)
 
