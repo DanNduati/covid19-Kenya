@@ -1,4 +1,4 @@
-# covid19-webscraper-and-sms-alert
+# covid19-Kenya
 ## Background
 ### webscraper
 This is a basic webscrapper built on python3 and which collects real-time data from both official and unofficial sources so that the public can have a fair-minded understanding of this outbreak with transparent data sources.To pull data from these sources i use the selenium module,primarily it is for automating web applications for testing purposes but i use it to scrape data from: https://www.worldometers.info/coronavirus/
