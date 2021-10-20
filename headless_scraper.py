@@ -1,9 +1,14 @@
 import requests
 import pandas as pd
+import sqlalchemy as db
 from bs4 import BeautifulSoup
 from datetime import datetime
+from config import my_config
+from models import Base
 
 url = 'https://www.worldometers.info/coronavirus/'
+database_uri = my_config.database_uri
+
 page = requests.get(url)
 soup = BeautifulSoup(page.text,'html.parser')
 #print(soup.prettify())
@@ -31,3 +36,13 @@ print(kenyan_data)
 frame = pd.DataFrame(data)
 date = datetime.now().strftime("%Y_%m_%d-%I:%M:%S_%p")
 frame.to_csv(f'data/data_{date}.csv',header=False, index=False,encoding='utf-8')
+#connect to the database
+engine = db.create_engine(database_uri)
+connection = engine.connect()
+Base.metadata.bind = engine
+#create table
+try:
+	Base.metadata.create_all()
+	print('Table created successfully')
+except Exception as e:
+	raise e
