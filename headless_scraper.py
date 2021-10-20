@@ -1,4 +1,5 @@
 import requests
+import pandas as pd
 from bs4 import BeautifulSoup
 from datetime import datetime
 
@@ -26,3 +27,7 @@ for i,item in enumerate(data_rows):
 header = data[0]
 print(header)
 print(kenyan_data)
+#convert the data to a pandas dataframe 
+frame = pd.DataFrame(data)
+date = datetime.now().strftime("%Y_%m_%d-%I:%M:%S_%p")
+frame.to_csv(f'data/data_{date}.csv',header=False, index=False,encoding='utf-8')
