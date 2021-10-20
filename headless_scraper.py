@@ -3,7 +3,7 @@ import pandas as pd
 import sqlalchemy as db
 from bs4 import BeautifulSoup
 from datetime import datetime
-from config import my_config
+import config as my_config
 from models import Base
 
 url = 'https://www.worldometers.info/coronavirus/'
