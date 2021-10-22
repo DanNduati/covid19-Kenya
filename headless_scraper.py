@@ -35,7 +35,7 @@ def store_db(k_data):
 	data = Data(
 		country_name = k_data[1],
 		total_cases = clean_column(k_data[2]),
-		new_cases = clean_column(k_data[3]),
+		new_cases = clean_column(k_data[3]), 
 		total_deaths = clean_column(k_data[4]),
 		new_deaths = clean_column(k_data[5]),
 		total_recovered = clean_column(k_data[6]),
@@ -48,14 +48,14 @@ def store_db(k_data):
 		tests_per_m = clean_column(k_data[13]),
 		population = clean_column(k_data[14]),
 		new_cases_per_m = clean_column(k_data[18])
-	)
+	) 	
 	Session = sessionmaker(bind=engine)
 	s = Session()
 	try:
 		s.add(data)
 		s.commit()
 		date = datetime.now().strftime("%Y_%m_%d-%I:%M:%S_%p")
-		print(f'Success -> {date}')
+		print(f'Success ->{date}')
 	except Exception as e:
 		raise e
 
