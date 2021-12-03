@@ -9,3 +9,4 @@ To add ontu the webscripting We will use the Twilio API to send the scraped data
 https://www.twilio.com/try-twilio .Grab your Account SID and auth token from your Twilio account console.If you are on a Twilio Trial account, your outgoing SMS messages are limited to phone numbers that you have verified with Twilio. Phone numbers can be verified via your Twilio Console's Verified Caller IDs.
 
 ## Headless scraper with bs4
+New and improved lol
