@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+#old scripts virtual environment
+old-venv/
+
 # C extensions
 *.so
 
