@@ -1,17 +1,25 @@
 import time
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 
 class virus():
     def __init__(self):
-        self.driver = webdriver.Chrome()
+        self.chrome_options = Options()
+        self.chrome_options.add_argument("--headless")
+        self.driver = webdriver.Chrome(options=self.chrome_options)
 
     def scrape_data(self):
         try:
             self.driver.get('https://www.worldometers.info/coronavirus/')
             #//*[@id="main_table_countries_today"]/tbody[1]/tr[118]/td[1]
-            table = self.driver.find_element_by_xpath('//*[@id="main_table_countries_today"]/tbody[1]')
+            #/html/body/div[3]/div[3]/div/div[6]/div[1]/div/table
+            #//*[@id="main_table_countries_today"]
+            #//*[@id="main_table_countries_today"]/tbody[1]/tr[93]
+            table = self.driver.find_element_by_xpath('//*[@id="main_table_countries_today"]/tbody[1]/tr[93]')
             country_element = table.find_element_by_xpath("//td[contains(., 'Kenya')]")
             row = country_element.find_element_by_xpath("./..")
+            self.driver.close()
+            self.driver.quit()
             data = row.text.split(" ")
             print(row.text)
             print(data)
