@@ -1,10 +1,7 @@
 #!/usr/bin/python3
-#database model
-from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, String, TIMESTAMP, text
 from sqlalchemy.dialects.mysql import INTEGER, DOUBLE
-
-Base = declarative_base()
+from database import Base
 
 class Data(Base):
     __tablename__ = 'data'
