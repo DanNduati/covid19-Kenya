@@ -6,7 +6,7 @@ __pycache__/
 #old scripts virtual environment
 old-venv/
 # logs
-logs/
+scraper.log
 # Data during testin
 data/
 # C extensions
