@@ -2,3 +2,6 @@
 # According to https://github.com/pypa/pip/issues/4022, this is a bug resulting from Ubuntu providing incorrect metadata to pip.  
 freeze:
 	pip freeze | grep -v "pkg_resources" > requirements.txt
+init:
+	mkdir logs
+	alembic upgrade head
