@@ -235,3 +235,6 @@ sqlalchemy.exc.ProgrammingError: (pymysql.err.ProgrammingError) (1146, "Table 'c
 2022-01-01 01:25:36,110 - scrapper - INFO - Scraping data...
 2022-01-01 01:25:39,797 - scrapper - INFO - Data scrapped successfully!
 2022-01-01 01:25:39,831 - scrapper - INFO - Data added to db!
+2022-01-01 01:30:17,355 - scrapper - INFO - Scraping data...
+2022-01-01 01:30:20,626 - scrapper - INFO - Data scrapped successfully!
+2022-01-01 01:30:20,658 - scrapper - INFO - Data added to db!
