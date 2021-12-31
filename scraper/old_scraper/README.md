@@ -26,8 +26,8 @@ python scraper_msg.py
 ```
 # Outcome
 
-<img src="../../images/terminaloutput.png"></img>
+<img src="images/terminaloutput.png"></img>
 
 ---
 
-<img src="../../images/sms.jpeg"></img>
+<img src="images/sms.jpeg"></img>
