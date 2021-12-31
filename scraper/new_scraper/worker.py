@@ -8,7 +8,7 @@ from utils.scraper import get_data
 from database import Session
 import pandas as pd
 
-logging.config.fileConfig(fname="log.conf",disable_existing_loggers=False)
+logging.config.fileConfig(fname=f"{pathlib.Path(__file__).parent.joinpath(f'log.conf')}",disable_existing_loggers=False)
 # get the logger specified in the config file
 logger = logging.getLogger("scrapper")
 # Disable requests encoding logging
