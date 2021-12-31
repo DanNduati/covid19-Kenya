@@ -20,6 +20,11 @@ Create a `.env` file similar to `.env.example` and add your twilio credentials a
 pip install -r requirements.txt
 ```
 
+## Create logs directory and run db migration
+```bash
+make init
+```
+
 ## Run the script
 As mentioned above I run this script in the background.For this I use the [cron](https://en.wikipedia.org/wiki/Cron) service available in all Unix-based distributions.
 ## Some Cron background and scheduling of our worker
