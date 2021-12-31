@@ -3,9 +3,9 @@ from datetime import datetime
 import logging
 import logging.config
 import requests
-from models import Data
+from models import Data,Base
 from utils.scraper import get_data
-from database import Session
+from database import Session,engine
 import pandas as pd
 
 logging.config.fileConfig(fname=f"{pathlib.Path(__file__).parent.joinpath(f'log.conf')}",disable_existing_loggers=False)
@@ -14,6 +14,9 @@ logger = logging.getLogger("scrapper")
 # Disable requests encoding logging
 logging.getLogger("chardet.charsetprober").disabled = True
 logging.getLogger('urllib3.connectionpool').disabled=True
+
+#logger.info("Creating tables")
+#Base.metadata.create_all(bind=engine)
 
 def clean_column(field):
 	#normalize the data
@@ -26,9 +29,9 @@ def store_db(k_data:list):
 	try:
 		session.add(data)
 		session.commit()
-		logging.info("Data added to db!")
+		logger.info("Data added to db!")
 	except Exception as e:
-		logging.exception("Exception occured!")
+		logger.exception("Exception occured!")
 	finally:
 		session.close()
 
@@ -43,9 +46,9 @@ def main():
 		frame.to_csv(csv_path,header=False, index=False,encoding='utf-8')
 		store_db(kenyan_data)
 	except requests.exceptions.RequestException:
-		logging.exception("Scraping requests exception occured!")
+		logger.exception("Scraping requests exception occured!")
 	except Exception as e:
-		logging.exception("Other exception occured!")
+		logger.exception("Other exception occured!")
 
 if __name__ == "__main__":
 	main()
