@@ -4,3 +4,9 @@
 2022-01-01 00:07:00,768 - scrapper - INFO - Scraping data...
 2022-01-01 00:07:05,541 - scrapper - INFO - Data scrapped successfully!
 2022-01-01 00:07:05,570 - root - INFO - Data added to db!
+2022-01-01 00:13:03,527 - scrapper - INFO - Scraping data...
+2022-01-01 00:13:06,958 - scrapper - INFO - Data scrapped successfully!
+2022-01-01 00:13:06,997 - root - INFO - Data added to db!
+2022-01-01 00:13:26,035 - scrapper - INFO - Scraping data...
+2022-01-01 00:13:29,603 - scrapper - INFO - Data scrapped successfully!
+2022-01-01 00:13:29,636 - root - INFO - Data added to db!
